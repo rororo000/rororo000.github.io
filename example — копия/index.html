@@ -1,0 +1,48 @@
+<html>
+<head>
+	<link href="css/photoviewer.css" rel="stylesheet">
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/photoviewer.js" charset="utf-8"></script>
+	<style>
+.image-set {
+  font-size: 0px;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.image-set a {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 2px;
+  border: 1px solid #ddd;
+  transition: border-color .3s ease;
+  cursor: zoom-in;
+}
+
+.image-set a:hover {
+  border-color: #aaa;
+}
+	</style>
+</head>
+<body>
+	<div>
+		<a data-gallery="image-set" 
+		   data-caption="Картинка 1"
+           data-group="a"
+           href="img/1.jpg">
+            <img src="img/1.jpg"  style="height:300px" alt="Image 1">
+        </a>
+
+		<a data-gallery="image-set" 
+		   data-caption="Caption 2"
+           data-group="a"
+           href="img/2.jpg">
+            <img src="img/2.jpg"  style="height:300px" alt="Image 2">
+        </a>
+	</div>
+	
+	<script>
+		$('[data-gallery=image-set]').photoviewer();
+	</script>
+</body>
+</html>
